@@ -61,16 +61,16 @@ export default function QuizPage() {
   });
 
   const result =
-    answers.every(Boolean) &&
-    (count.A > count.B && count.A > count.C
-      ? '恐龍化石（邏輯型、知識探索）'
-      : count.B > count.C
-      ? '沒牙仔（情感型、童趣幻想）'
-      : 'F1 賽車（動感型、實作偏好）');
+  answers.every(Boolean) &&
+  (count.A > count.B && count.A > count.C
+    ? '戰術學者（邏輯型、知識探索）'
+    : count.B > count.C
+    ? '幻想導師（情感型、童趣幻想）'
+    : '子彈高手（動感型、實作偏好）');
 
   return (
     <main style={{ padding: 32, fontFamily: 'sans-serif' }}>
-      <h1 style={{ fontSize: 24, marginBottom: 24 }}>🌟 樂高五個問題</h1>
+      <h1 style={{ fontSize: 24, marginBottom: 24 }}>🌟 毛毛樂</h1>
       {questions.map((q, i) => (
         <div key={i} style={{ marginBottom: 20 }}>
           <p style={{ fontWeight: 'bold' }}>{q.text}</p>
@@ -90,7 +90,7 @@ export default function QuizPage() {
       ))}
       {result && (
         <div style={{ marginTop: 32, padding: 16, background: '#f4f4f4' }}>
-          <h2>🎉 你的樂高對應是：</h2>
+          <h2>🎉 毛毛是：</h2>
           <p style={{ fontSize: 20 }}>{result}</p>
         </div>
       )}
