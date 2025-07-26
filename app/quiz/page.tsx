@@ -1,3 +1,5 @@
+// 前端頁面與後端 API 整合版，已連接 Gmail SMTP 寄送功能（Vercel-ready）
+
 'use client';
 import { useState } from "react";
 
@@ -161,8 +163,8 @@ export default function GiftQuiz() {
       <div className="max-w-xl w-full bg-white shadow-xl rounded-xl p-6 space-y-6">
         {!submitted ? (
           <>
-            <h2 className="text-xl font-bold text-gray-800">請選出最符合你的選項</h2>
-            <div className="space-y-3">
+            <h2 className="text-xl font-bold text-black">請選出最符合你的選項</h2>
+            <div className="space-y-3 text-black">
               {questions[step].options.map((opt) => (
                 <button
                   key={opt.value}
@@ -173,7 +175,7 @@ export default function GiftQuiz() {
                 </button>
               ))}
             </div>
-            <p className="text-sm text-gray-400 text-center">
+            <p className="text-sm text-black text-center">
               問題 {step + 1} / {questions.length}
             </p>
           </>
@@ -187,4 +189,3 @@ export default function GiftQuiz() {
     </div>
   );
 }
-
