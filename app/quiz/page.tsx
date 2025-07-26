@@ -1,4 +1,4 @@
-'use client';// 前端頁面與後端 API 整合版，已連接 Gmail SMTP 寄送功能（Vercel-ready）
+'use client';
 
 import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
