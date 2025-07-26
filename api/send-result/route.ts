@@ -26,3 +26,4 @@ export async function POST(req: Request) {
     return NextResponse.json({ success: false, error: String(error) }, { status: 500 });
   }
 }
+
