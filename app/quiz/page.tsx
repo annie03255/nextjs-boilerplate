@@ -19,11 +19,11 @@ const questions = [
     ],
   },
   {
-    question: "你最喜歡的書／電影主角通常是：",
+    question: "你最喜歡的玩具類型曾是：",
     options: [
-      { label: "智慧型主角，靠邏輯解開謎團", value: "A" },
-      { label: "溫暖型角色，有情感深度和幻想視角", value: "B" },
-      { label: "行動派英雄，靠敏捷和執行力完成任務", value: "C" },
+      { label: "拼圖、模型或實驗玩具", value: "A" },
+      { label: "有角色故事背景的收藏品", value: "B" },
+      { label: "可動機械、組裝車、機器裝置", value: "C" },
     ],
   },
   {
@@ -40,6 +40,86 @@ const questions = [
       { label: "精緻、有層次，讓人越看越有味道", value: "A" },
       { label: "有點可愛、有點感性，會心一笑那種", value: "B" },
       { label: "外型帥氣、動感，讓人忍不住動手玩", value: "C" },
+    ],
+  },
+  {
+    question: "你喜歡怎樣開始一天？",
+    options: [
+      { label: "聽一集知識型 podcast 或閱讀新知", value: "A" },
+      { label: "看一段溫馨故事或搞笑影片", value: "B" },
+      { label: "做幾組伸展或來點清醒運動", value: "C" },
+    ],
+  },
+  {
+    question: "旅行中，你最想體驗的是：",
+    options: [
+      { label: "參觀博物館與歷史遺跡", value: "A" },
+      { label: "沉浸當地文化與傳說故事", value: "B" },
+      { label: "冒險活動或嘗試刺激行程", value: "C" },
+    ],
+  },
+  {
+    question: "你處理問題的方式是：",
+    options: [
+      { label: "分析、拆解並一步步解決", value: "A" },
+      { label: "感受情境、體會每個人的立場", value: "B" },
+      { label: "直接動手試試，邊做邊調整", value: "C" },
+    ],
+  },
+  {
+    question: "你的工作習慣偏好：",
+    options: [
+      { label: "制定清晰流程、按步驟執行", value: "A" },
+      { label: "氣氛和諧、有情感交流", value: "B" },
+      { label: "快速試錯、當下修正與反應", value: "C" },
+    ],
+  },
+  {
+    question: "你對節日禮物的想像是：",
+    options: [
+      { label: "耐用、有質感的設計物件", value: "A" },
+      { label: "有情感意義或故事的物品", value: "B" },
+      { label: "能互動或讓我玩一玩的東西", value: "C" },
+    ],
+  },
+  {
+    question: "最讓你放鬆的活動是：",
+    options: [
+      { label: "動腦解謎、玩策略型桌遊", value: "A" },
+      { label: "看動畫或小說、畫畫、寫字", value: "B" },
+      { label: "實作、組裝、修理、手作", value: "C" },
+    ],
+  },
+  {
+    question: "你最欣賞哪種特質的人？",
+    options: [
+      { label: "思考深入、有邏輯力", value: "A" },
+      { label: "真誠善良、情感細膩", value: "B" },
+      { label: "動作快、反應力強", value: "C" },
+    ],
+  },
+  {
+    question: "你面對陌生環境時：",
+    options: [
+      { label: "先觀察，內心推敲可能的規則", value: "A" },
+      { label: "觀察他人情緒與互動方式", value: "B" },
+      { label: "直接試，邊走邊調整反應", value: "C" },
+    ],
+  },
+  {
+    question: "你處理突發狀況時：",
+    options: [
+      { label: "冷靜思考、找出最佳策略", value: "A" },
+      { label: "安撫他人情緒、先共感再解決", value: "B" },
+      { label: "迅速行動，邊做邊找出路", value: "C" },
+    ],
+  },
+  {
+    question: "你會選擇參加的課程類型：",
+    options: [
+      { label: "邏輯推理、數理、系統性思考相關", value: "A" },
+      { label: "藝術、文學、心理相關", value: "B" },
+      { label: "木工、機械、互動設計相關", value: "C" },
     ],
   },
 ];
