@@ -1,9 +1,5 @@
-// 不依賴 @/components 的版本，使用原生 HTML + Tailwind，便於部署
-
 'use client';
-
 import { useState } from "react";
-import { motion } from "framer-motion";
 
 const questions = [
   {
@@ -27,7 +23,7 @@ const questions = [
     options: [
       { label: "拼圖、模型或實驗玩具", value: "A" },
       { label: "有角色故事背景的收藏品", value: "B" },
-      { label: "可動機械、組裝零件、裝置型玩具", value: "C" },
+      { label: "可動機械、組裝車、機器裝置", value: "C" },
     ],
   },
   {
@@ -63,67 +59,67 @@ const questions = [
     ],
   },
   {
-    question: "放假時你比較傾向：",
+    question: "在團體中你通常是：",
     options: [
-      { label: "探索博物館或歷史遺跡", value: "A" },
-      { label: "看動畫、追劇或畫畫寫日記", value: "B" },
-      { label: "參加運動或玩桌遊、玩具模型", value: "C" },
+      { label: "負責分析與策略規劃", value: "A" },
+      { label: "聯繫情感、拉近關係的潤滑劑", value: "B" },
+      { label: "最先衝出去、帶頭行動的那個人", value: "C" },
     ],
   },
   {
-    question: "如果有個難題擺在眼前，你會：",
+    question: "你對旅行的想像是：",
     options: [
-      { label: "查資料、拆解問題、慢慢找方法", value: "A" },
-      { label: "問朋友的看法，然後靠感覺選路線", value: "B" },
-      { label: "直接試幾種方法，看哪個最有效", value: "C" },
+      { label: "參觀歷史景點、博物館", value: "A" },
+      { label: "體驗當地文化、與人交流", value: "B" },
+      { label: "探索自然地貌或動手冒險", value: "C" },
     ],
   },
   {
-    question: "你覺得理想中的禮物應該是：",
+    question: "遇到困難時，你傾向：",
     options: [
-      { label: "值得收藏與思考，越看越有意思", value: "A" },
-      { label: "有點情懷與回憶，會讓人想抱緊處理", value: "B" },
-      { label: "酷帥好動，拿到就會想立刻動手", value: "C" },
+      { label: "分析問題、查資料找解方", value: "A" },
+      { label: "尋求支持、聽朋友建議", value: "B" },
+      { label: "直接試著做做看，邊做邊解", value: "C" },
     ],
   },
   {
-    question: "你覺得哪句形容最接近你？",
+    question: "你覺得哪種節目最有趣？",
     options: [
-      { label: "安靜觀察型，會默默研究和記錄", value: "A" },
-      { label: "情感豐沛型，對人事物很有感觸", value: "B" },
-      { label: "反應快行動派，會先做再說", value: "C" },
+      { label: "益智類、推理類節目", value: "A" },
+      { label: "生活故事、溫馨感人節目", value: "B" },
+      { label: "競速比賽、實境挑戰類", value: "C" },
     ],
   },
   {
-    question: "如果要策劃一場活動，你會先：",
+    question: "下班／下課後最理想的放鬆方式是？",
     options: [
-      { label: "畫流程圖、分析細節", value: "A" },
-      { label: "想像大家的心情、氣氛和畫面", value: "B" },
-      { label: "列出器材、空間、動線，馬上安排實作", value: "C" },
+      { label: "靜靜做模型、玩桌遊", value: "A" },
+      { label: "看動畫、畫畫、聽音樂", value: "B" },
+      { label: "動手做東西或戶外活動", value: "C" },
     ],
   },
   {
-    question: "哪個場景最讓你感興趣？",
+    question: "你覺得小時候的你最像？",
     options: [
-      { label: "古文明遺跡／地下神殿／實驗室", value: "A" },
-      { label: "童話村莊／雲端之城／幻想生物棲息地", value: "B" },
-      { label: "賽道設施／工程工坊／動力研究室", value: "C" },
+      { label: "好奇寶寶型，喜歡發問跟研究", value: "A" },
+      { label: "幻想家型，喜歡玩扮家家酒", value: "B" },
+      { label: "動作派型，喜歡拼裝、拆解東西", value: "C" },
     ],
   },
   {
-    question: "你在團隊中通常扮演的角色是？",
+    question: "你做出選擇時，通常依靠：",
     options: [
-      { label: "規劃者／策略顧問／筆記者", value: "A" },
-      { label: "氣氛組／橋樑角色／故事捕捉者", value: "B" },
-      { label: "執行手／工具大師／搞定現場的人", value: "C" },
+      { label: "理性分析、比較優缺點", value: "A" },
+      { label: "情感直覺、內在感受", value: "B" },
+      { label: "實際操作過的體驗或成果", value: "C" },
     ],
   },
   {
-    question: "你最希望朋友怎麼形容你？",
+    question: "你對一份禮物最重視什麼？",
     options: [
-      { label: "有觀察力、有點神秘、思慮縝密", value: "A" },
-      { label: "溫暖、有童心、有創意", value: "B" },
-      { label: "帶得動、能執行、有能量", value: "C" },
+      { label: "細節設計與概念創意", value: "A" },
+      { label: "感情與回憶的連結", value: "B" },
+      { label: "實用度與是否能馬上玩", value: "C" },
     ],
   },
 ];
@@ -140,12 +136,11 @@ export default function GiftQuiz() {
     setTimeout(() => {
       if (step < questions.length - 1) setStep(step + 1);
       else handleSubmit(newAnswers);
-    }, 300);
+    }, 200);
   };
 
   const handleSubmit = async (finalAnswers: string[]) => {
     setSubmitted(true);
-
     const count = { A: 0, B: 0, C: 0 };
     finalAnswers.forEach((ans) => count[ans as keyof typeof count]++);
     const result = Object.entries(count).sort((a, b) => b[1] - a[1])[0][0];
@@ -162,31 +157,26 @@ export default function GiftQuiz() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-purple-100 to-white flex items-center justify-center p-4">
-      <div className="max-w-xl w-full shadow-2xl rounded-2xl bg-white p-6">
+    <div className="min-h-screen flex items-center justify-center bg-gradient-to-b from-yellow-100 to-white p-4">
+      <div className="max-w-xl w-full bg-white shadow-xl rounded-xl p-6 space-y-6">
         {!submitted ? (
-          <motion.div
-            key={step}
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.3 }}
-          >
-            <h2 className="text-xl font-bold mb-4">請選出最符合你的選項</h2>
-            <div className="space-y-4">
+          <>
+            <h2 className="text-xl font-bold text-gray-800">請選出最符合你的選項</h2>
+            <div className="space-y-3">
               {questions[step].options.map((opt) => (
                 <button
                   key={opt.value}
                   onClick={() => handleSelect(opt.value)}
-                  className="w-full text-left p-4 border border-gray-300 rounded-lg hover:bg-purple-50"
+                  className="w-full text-left p-4 border rounded-lg hover:bg-yellow-100 transition"
                 >
                   {opt.label}
                 </button>
               ))}
             </div>
-            <p className="mt-6 text-sm text-gray-400 text-center">
+            <p className="text-sm text-gray-400 text-center">
               問題 {step + 1} / {questions.length}
             </p>
-          </motion.div>
+          </>
         ) : (
           <div className="text-center py-10">
             <h2 className="text-xl font-semibold">感謝你的參與！</h2>
@@ -197,3 +187,4 @@ export default function GiftQuiz() {
     </div>
   );
 }
+
