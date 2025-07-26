@@ -57,7 +57,6 @@ export default function QuizPage() {
     if (step + 1 < questions.length) {
       setStep(step + 1);
     } else {
-      // 計算結果
       const count = { A: 0, B: 0, C: 0 };
       newAnswers.forEach((ans) => count[ans as keyof typeof count]++);
       const top = Object.entries(count).sort((a, b) => b[1] - a[1])[0][0];
@@ -80,7 +79,7 @@ export default function QuizPage() {
               {questions[step].options.map((opt) => (
                 <button
                   key={opt.value}
-                  className="w-full p-3 border rounded-lg text-left hover:bg-gray-100"
+                  className="w-full p-3 border rounded-lg text-left hover:bg-gray-100 text-black"
                   onClick={() => handleSelect(opt.value)}
                 >
                   {opt.label}
@@ -94,7 +93,7 @@ export default function QuizPage() {
         ) : (
           <div className="text-center">
             <h2 className="text-xl font-semibold text-black">🎁 你的結果是：</h2>
-            <p className="text-lg mt-4">{result}</p>
+            <p className="text-lg mt-4 text-black">{result}</p>
           </div>
         )}
       </div>
